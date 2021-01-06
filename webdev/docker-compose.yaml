@@ -93,3 +93,6 @@ networks:
         - subnet: 172.19.0.0/24
   backend-web:
     internal: true
+    ipam:
+      config:
+        - subnet: 172.20.0.0/24
