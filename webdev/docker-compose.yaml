@@ -5,8 +5,9 @@ services:
     container_name: nginx
     restart: 'always'
     networks:
-      - frontend-web
-      - backend-web
+      frontend-web:
+        ipv4_address: 172.19.0.5
+      backend-web:
     ports:
       - "80:80"
     volumes:
