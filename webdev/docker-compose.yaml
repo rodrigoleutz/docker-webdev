@@ -85,6 +85,14 @@ services:
     volumes:
        - ./database:/var/lib/mysql
        - /etc/localtime:/etc/localtime:ro
+  phpmyadmin:
+    image: phpmyadmin
+    container_name: phpmyadmin
+    networks:
+      - backend-web
+    environment:
+      PMA_HOST: db
+      MYSQL_ROOT_PASSWORD: senha123
 networks:
   frontend-web:
     internal: false

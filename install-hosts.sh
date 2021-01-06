@@ -10,5 +10,6 @@ sudo sh -c 'echo "172.19.0.5       dev.php8" >> /etc/hosts'
 sudo sh -c 'echo "172.19.0.5       dev.php7" >> /etc/hosts'
 sudo sh -c 'echo "172.19.0.5       dev.php5" >> /etc/hosts'
 sudo sh -c 'echo "172.19.0.5       dev.wp" >> /etc/hosts'
+sudo sh -c 'echo "172.19.0.5       dev.phpmyadmin" >> /etc/hosts'
 echo "Hosts adicionados"
 echo "Instalação completa"
