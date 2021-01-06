@@ -23,6 +23,8 @@ Instruções:
 
 - Wordpress: http://dev.wp
 
+- phpMyAdmin: http://dev.phpmyadmin
+
 - Mysql digite no bash: sudo docker exec -it db mysql -u root -psenha123
 
 <h3>Desabilitar</h3>
