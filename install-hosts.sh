@@ -1,4 +1,10 @@
 #!/bin/bash
+
+##
+##  Projeto:    Docker para programar em PHP
+##  Autor:      Rodrigo Leutz
+##
+
 DOCKERIP="172.19.0.5"
 
 ##	Checa se host existe

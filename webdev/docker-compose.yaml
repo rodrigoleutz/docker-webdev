@@ -86,6 +86,8 @@ services:
        - ./database:/var/lib/mysql
        - /etc/localtime:/etc/localtime:ro
   phpmyadmin:
+    depends_on:
+      - db
     image: phpmyadmin
     container_name: phpmyadmin
     networks:

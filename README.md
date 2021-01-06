@@ -30,7 +30,9 @@ Instruções:
 <center><img src="img/php-docker.png"></center>
 
 
-<h3>Desabilitar</h3>
+<h3>Ativar</h3>
+- ./activate.sh
+<br>
+<h3>Desativar</h3>
+- ./deactivate.sh
 
-- cd webdev
-- sudo docker-compose down
