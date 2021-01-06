@@ -27,6 +27,9 @@ Instruções:
 
 - Mysql digite no bash: sudo docker exec -it db mysql -u root -psenha123
 
+<center><img src="img/php-docker.png"></center>
+
+
 <h3>Desabilitar</h3>
 
 - cd webdev
