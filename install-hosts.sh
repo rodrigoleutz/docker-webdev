@@ -1,5 +1,5 @@
 #!/bin/bash
-$DOCKERIP="172.19.0.5"
+DOCKERIP="172.19.0.5"
 
 ##	Checa se host existe
 check_host(){
