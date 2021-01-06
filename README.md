@@ -7,13 +7,13 @@ Instruções:
 
 -------------------------------------------
 
-- Arch Linux
+- Arch Linux<br>
 	$ ./install-hosts.sh
 
 -------------------------------------------
 
 
-Para utilizar acesse no navegador:
+<h3>Para utilizar acesse no navegador:</h3>
 
 - PHP 5.6: http://dev.php5
 
@@ -25,3 +25,7 @@ Para utilizar acesse no navegador:
 
 - Mysql digite no bash: sudo docker exec -it db mysql -u root -psenha123
 
+<h3>Desabilitar</h3>
+
+- cd webdev
+- sudo docker-compose down
