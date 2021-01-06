@@ -7,8 +7,17 @@ Instruções:
 
 -------------------------------------------
 
-- Arch Linux<br>
-	$ ./install-hosts.sh
+<h3>Instalar</h3>
+<h5>Arch Linux</h5>
+- ./install-hosts.sh
+<br>
+<h3>Ativar</h3>
+- ./activate.sh
+<br>
+<h3>Desativar</h3>
+- ./deactivate.sh
+<br>
+
 
 -------------------------------------------
 
@@ -27,12 +36,6 @@ Instruções:
 
 - Mysql digite no bash: sudo docker exec -it db mysql -u root -psenha123
 
+<br><br>
 <center><img src="img/php-docker.png"></center>
-
-
-<h3>Ativar</h3>
-- ./activate.sh
-<br>
-<h3>Desativar</h3>
-- ./deactivate.sh
 
