@@ -1,5 +1,5 @@
 # docker-webdev
-Docker para desenvolvimento em linguagem PHP
+Docker para programar em PHP
 
 Autor:	Rodrigo Leutz
 
@@ -9,13 +9,13 @@ Instruções:
 
 <h3>Instalar</h3>
 <h5>Arch Linux</h5>
-- ./install-hosts.sh
+	./install-hosts.sh
 <br>
 <h3>Ativar</h3>
-- ./activate.sh
+	./activate.sh
 <br>
 <h3>Desativar</h3>
-- ./deactivate.sh
+	./deactivate.sh
 <br>
 
 
