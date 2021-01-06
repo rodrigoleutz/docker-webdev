@@ -37,7 +37,7 @@ services:
     container_name: php7-fpm
     restart: 'always'
     networks:
-      -frontend-web
+      - frontend-web
       - backend-web
     volumes:
       - ./nginx-public:/srv/http
