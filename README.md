@@ -8,7 +8,7 @@ Instruções:
 -------------------------------------------
 
 <h3>Instalar</h3>
-<h5>Arch Linux / Fedora / Ubuntu</h5>
+<h5>Arch Linux / Ubuntu</h5>
 	./install-hosts.sh
 <br>
 <h3>Ativar</h3>
