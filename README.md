@@ -8,8 +8,8 @@ License:	GPL v2.0
 
 <center><a href="https://www.youtube.com/watch?v=rDWlNzBljS0" target="_blank"><img src="img/php-docker.png"></a></center>
 
-Instruções:
 
+<h2>Instruções:</h2>
 -------------------------------------------
 
 <h3>Instalar</h3>
@@ -22,7 +22,6 @@ Instruções:
 <h3>Desativar</h3>
 	./deactivate.sh
 <br>
-
 
 -------------------------------------------
 
