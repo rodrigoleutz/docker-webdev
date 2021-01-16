@@ -39,7 +39,7 @@ Instruções:
 - Mysql digite no bash: sudo docker exec -it db mysql -u root -psenha123
 
 <h3>Pasta dos arquivos</h3>
-
+<pre>
 ├── activate.sh = Activate script
 ├── deactivate.sh = Deactivate script
 ├── img
@@ -84,6 +84,4 @@ Instruções:
         │   └── info.php
         └── wordpress = Wordpress server files
             └── info.php
-
-
-
+</pre>
