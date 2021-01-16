@@ -9,8 +9,9 @@ License:	GPL v2.0
 <center><a href="https://www.youtube.com/watch?v=rDWlNzBljS0" target="_blank"><img src="img/php-docker.png"></a></center>
 
 
-<h2>Instruções:</h2>
 -------------------------------------------
+
+<h2>Instruções:</h2>
 
 <h3>Instalar</h3>
 <h5>Arch Linux / Fedora / Ubuntu</h5>
