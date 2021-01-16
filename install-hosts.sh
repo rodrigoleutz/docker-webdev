@@ -19,7 +19,14 @@ check_host(){
 
 cd webdev
 echo "Digite o password do sudo para instalar"
-yes | sudo LC_ALL=en_US.UTF-8 pacman -S docker docker-compose
+DISTRO=`cat /etc/*-release | grep ^ID | awk -F= '{ print $2 }'`
+if [ "$DISTRO" == "arch" ]; then
+	yes | sudo LC_ALL=en_US.UTF-8 pacman -S docker docker-compose
+elif [ "$DISTRO" == "ubuntu" ]; then
+	sudo apt install -y docker docker-compose
+elif [ "$DISTRO" == "fedora" ]; then
+	sudo dnf install -y docker docker-compose
+fi
 sudo systemctl enable --now docker
 sudo docker-compose up -d
 check_host "dev.php8"
