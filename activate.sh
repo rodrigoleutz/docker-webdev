@@ -5,9 +5,6 @@
 ##  Autor:      Rodrigo Leutz
 ##
 echo "Digite a senha do sudo para ativar."
-if [ "$DISTRO" == "fedora" ]; then
-	sudo setenforce 0
-fi
 cd webdev
 echo
 sudo docker-compose up -d

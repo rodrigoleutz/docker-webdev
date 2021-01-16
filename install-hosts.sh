@@ -31,6 +31,7 @@ elif [ "$DISTRO" == "fedora" ]; then
 	if [ "$OPT" == "yes" ]; then
 		sudo dnf install -y docker-compose moby-engine
 		sudo grubby --update-kernel=ALL --args="systemd.unified_cgroup_hierarchy=0"
+		sudo sed -i -e '/SELINUX=/s/=.*/=disabled/' /etc/selinux/config 
 		sudo systemctl disable firewalld
 	else
 		exit
