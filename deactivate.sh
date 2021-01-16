@@ -4,12 +4,12 @@
 ##  Projeto:    Docker para programar em PHP
 ##  Autor:      Rodrigo Leutz
 ##
-echo "Digite a senha do sudo para desativar."
-cd webdev
 echo
+echo "Enter the sudo password to deactivate.."
+cd webdev
 sudo docker-compose down
 echo
 echo "------------------------------------------"
-echo "Docker para programação em PHP desativado."
+echo " Docker for PHP programming is disabled."
 echo "------------------------------------------"
 echo
