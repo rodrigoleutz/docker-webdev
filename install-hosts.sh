@@ -19,7 +19,7 @@ check_host(){
 
 cd webdev
 echo "Digite o password do sudo para instalar"
-DISTRO=`cat /etc/*-release | grep ^ID | awk -F= '{ print $2 }'`
+DISTRO=`cat /etc/*-release | grep ^ID | awk -F= '{ print $2 }' | head -n 1`
 if [ "$DISTRO" == "arch" ]; then
 	yes | sudo LC_ALL=en_US.UTF-8 pacman -S docker docker-compose
 elif [ "$DISTRO" == "ubuntu" ]; then
