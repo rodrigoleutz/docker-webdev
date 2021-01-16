@@ -1,7 +1,8 @@
 # docker-webdev
 Docker para programar em PHP
 
-Autor:	Rodrigo Leutz
+Autor:		Rodrigo Leutz
+License:	GPL v2.0
 
 <center><a href="https://www.youtube.com/watch?v=rDWlNzBljS0" target="_blank"><img src="img/php-docker.png"></a></center>
 
@@ -35,8 +36,11 @@ Instruções:
 - Wordpress: http://dev.wp
 
 - phpMyAdmin: http://dev.phpmyadmin
+-- User: root
+-- Password: senha123
 
 - Mysql digite no bash: sudo docker exec -it db mysql -u root -psenha123
+
 
 <h3>Pasta dos arquivos</h3>
 <pre>
@@ -45,7 +49,7 @@ Instruções:
 ├── img
 │   └── php-docker.png
 ├── install-hosts.sh = Install script
-├── README.md
+├── README.md = This file
 └── webdev
     ├── build = Dockerfiles
     │   ├── php5-fpm
@@ -56,7 +60,7 @@ Instruções:
     │       └── Dockerfile
     ├── database = Database server files
     │   └── README.md
-    ├── docker-compose.yaml
+    ├── docker-compose.yaml = docker-compose file
     ├── nginx
     │   ├── conf = NGINX server config
     │   │   ├── nginx.conf
@@ -64,7 +68,7 @@ Instruções:
     │   │       └── fastcgi-php.conf
     │   ├── defaults = Default server config file
     │   │   └── defaults.conf
-    │   ├── logs
+    │   ├── logs = Servers logs
     │   │   └── README.md
     │   └── sites = NGINX servers config files
     │       ├── dev-php5.conf
@@ -72,7 +76,7 @@ Instruções:
     │       ├── dev-php8.conf
     │       ├── phpmyadmin.conf
     │       └── wp-dev.conf
-    └── nginx-public
+    └── nginx-public = Public directory
         ├── dev-php5 = PHP 5.6 server files
         │   ├── index.php
         │   └── info.php
