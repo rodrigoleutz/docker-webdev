@@ -25,15 +25,37 @@ if [ "$DISTRO" == "arch" ]; then
 elif [ "$DISTRO" == "ubuntu" ]; then
 	sudo apt install -y docker docker-compose
 elif [ "$DISTRO" == "fedora" ]; then
-	sudo dnf install -y docker docker-compose
+	echo "To install on Fedora will disable firewalld and selinux"
+	echo "Type 'yes' to install or 'no' to cancel"
+	read OPT
+	if [ "$OPT" == "yes" ]; then
+		sudo dnf install -y docker-compose moby-engine
+		sudo grubby --update-kernel=ALL --args="systemd.unified_cgroup_hierarchy=0"
+		sudo systemctl disable firewalld
+	else
+		exit
+	fi
 fi
 sudo systemctl enable --now docker
-sudo docker-compose up -d
 check_host "dev.php8"
 check_host "dev.php7"
 check_host "dev.php5"
 check_host "dev.wp"
 check_host "dev.phpmyadmin"
+if [ "$DISTRO" == "fedora" ]; then
+	echo ""
+	echo "-------------------"
+	echo "Instalação completa"
+	echo "  Reiniciando pc."
+	echo "     Após use:"
+	echo "    ./activate"
+	echo "-------------------"
+	echo
+	echo "Press enter to continue"
+	read
+	sudo reboot
+fi
+sudo docker-compose up -d
 echo ""
 echo "-------------------"
 echo "Instalação completa"
