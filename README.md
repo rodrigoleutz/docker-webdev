@@ -1,8 +1,10 @@
 # docker-webdev
 Docker para programar em PHP
 
+<pre>
 Autor:		Rodrigo Leutz
 License:	GPL v2.0
+</pre>
 
 <center><a href="https://www.youtube.com/watch?v=rDWlNzBljS0" target="_blank"><img src="img/php-docker.png"></a></center>
 
@@ -36,8 +38,10 @@ Instruções:
 - Wordpress: http://dev.wp
 
 - phpMyAdmin: http://dev.phpmyadmin
+<pre>
 -- User: root
 -- Password: senha123
+</pre>
 
 - Mysql digite no bash: sudo docker exec -it db mysql -u root -psenha123
 
