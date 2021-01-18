@@ -17,6 +17,9 @@ License:	GPL v2.0
 <h5>Arch Linux / Fedora / Ubuntu</h5>
 	./install-hosts.sh
 <br>
+<h3>Update</h3>
+        ./update.sh
+<br>
 <h3>Ativar</h3>
 	./activate.sh
 <br>

@@ -4,6 +4,7 @@
 ##  Projeto:    Docker para programar em PHP
 ##  Autor:      Rodrigo Leutz
 ##
+./update.sh
 echo
 echo "Enter the sudo password to activate."
 cd webdev
