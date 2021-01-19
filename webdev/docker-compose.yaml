@@ -121,6 +121,7 @@ services:
   phpmyadmin:
     depends_on:
       - db
+      - db-backup
     image: phpmyadmin
     container_name: phpmyadmin
     networks:
