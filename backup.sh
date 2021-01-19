@@ -63,7 +63,7 @@ start_bkp(){
 		echo "STOP SERVICE: [ ERROR ] -> Service do not stop" >> $LOG
   		exit_bkp
 	fi
-	for i in $DBS; do
+	for i in ${DBS[@]}; do
 		make_bkp "$i"
 	done
 	if tar -cJf $BACKDIR/$DATE-SQL.tar.xz $BACKDIR/$DATE-*.sql
