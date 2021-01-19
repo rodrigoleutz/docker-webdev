@@ -123,6 +123,7 @@ services:
       - db
       - db-backup
     image: phpmyadmin
+    restart: always
     container_name: phpmyadmin
     networks:
       - backend-web
