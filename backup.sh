@@ -46,7 +46,7 @@ check_paths(){
 	fi	
 }
 make_bkp(){
-	if docker-compose exec -T $DOCKER mysqldump -u$USER -p"$PASSWD" $1 > $BACKDIR/$DATE-$1.sql
+	if sudo docker exec -t $DOCKER mysqldump -u$USER -p"$PASSWD" $1 > $BACKDIR/$DATE-$1.sql
 	then
 		echo "DUMP: [ SUCCESS ] ->  $(pwd -P)$BACKDIR/$1-$DATE.sql" >> $LOG
 	else
@@ -56,7 +56,7 @@ make_bkp(){
 }
 start_bkp(){
 	check_paths
-	if docker-compose exec -T $DOCKER mysqladmin -u$USER -p$PASSWD stop-slave
+	if sudo docker exec -t $DOCKER mysqladmin -u$USER -p$PASSWD stop-slave
 	then
 		echo "STOP SERVICE: [ SUCCESS ] -> Service Stoped" >> $LOG
 	else
@@ -64,7 +64,7 @@ start_bkp(){
   		exit_bkp
 	fi
 	for i in $DBS; do
-		make_bkp $i
+		make_bkp "$i"
 	done
 	if tar -cJf $BACKDIR/$DATE-SQL.tar.xz $BACKDIR/$DATE-*.sql
 	then
@@ -74,7 +74,7 @@ start_bkp(){
 		echo "TAR: [ ERROR ] ->  $(pwd -P)$BACKDIR/$DATE-SQL.tar.xz" >> $LOG
 		ERROR="yes"
 	fi
-	if docker-compose exec -T $DOCKER mysqladmin -u$USER -p$PASSWD stop-slave
+	if sudo docker exec -t $DOCKER mysqladmin -u$USER -p$PASSWD stop-slave
 	then
 		echo "START SERVICE: [ SUCCESS ] -> Service Started" >> $LOG
 	else
