@@ -39,6 +39,7 @@ elif [ "$DISTRO" == "fedora" ]; then
 	fi
 fi
 sudo systemctl enable --now docker
+sudo chown 1001.1001 webdev/database -R
 check_host "dev.php8"
 check_host "dev.php7"
 check_host "dev.php5"
