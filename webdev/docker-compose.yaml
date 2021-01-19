@@ -4,6 +4,14 @@ services:
     image: nginx:1.19.5-alpine
     container_name: nginx
     restart: 'always'
+    depends_on:
+      - db
+      - db-backup
+      - php8-fpm
+      - php7-fpm
+      - php5-fpm
+      - wp-dev
+      - phpmyadmin
     networks:
       frontend-web:
         ipv4_address: 172.19.0.5

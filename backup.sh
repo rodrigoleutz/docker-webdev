@@ -8,6 +8,9 @@
 
 
 
+# => Paths
+BACKDIR="backup/files"
+BACKLOG="backup/logs"
 
 ########################
 
