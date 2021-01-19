@@ -42,6 +42,9 @@ License:	GPL v2.0
 
 - phpMyAdmin: http://dev.phpmyadmin
 <pre>
+-- Hosts: db
+          db-backup
+
 -- User: root
 -- Password: senha123
 </pre>
@@ -56,7 +59,21 @@ License:	GPL v2.0
 ├── img
 │   └── php-docker.png
 ├── install-hosts.sh = Install script
+├── LICENSE
+├── public
+│   ├── dev-php5 = PHP 5.6 server files
+│   │   ├── index.php
+│   │   └── info.php
+│   ├── dev-php7 = PHP 7.4 server files
+│   │   ├── index.php
+│   │   └── info.php
+│   ├── dev-php8 = PHP 8 server files
+│   │   ├── index.php
+│   │   └── info.php
+│   └── wordpress = Wordpress server files
+│       └── info.php
 ├── README.md = This file
+├── update.sh = Update script
 └── webdev
     ├── build = Dockerfiles
     │   ├── php5-fpm
@@ -66,33 +83,25 @@ License:	GPL v2.0
     │   └── php8-fpm
     │       └── Dockerfile
     ├── database = Database server files
+    │   ├── backup = Database backup server
+    │   │   └── README.md
+    │   ├── master = Database master server
+    │   │   └── README.md
     │   └── README.md
     ├── docker-compose.yaml = docker-compose file
-    ├── nginx
-    │   ├── conf = NGINX server config
-    │   │   ├── nginx.conf
-    │   │   └── snippets
-    │   │       └── fastcgi-php.conf
-    │   ├── defaults = Default server config file
-    │   │   └── defaults.conf
-    │   ├── logs = Servers logs
-    │   │   └── README.md
-    │   └── sites = NGINX servers config files
-    │       ├── dev-php5.conf
-    │       ├── dev-php7.conf
-    │       ├── dev-php8.conf
-    │       ├── phpmyadmin.conf
-    │       └── wp-dev.conf
-    └── nginx-public = Public directory
-        ├── dev-php5 = PHP 5.6 server files
-        │   ├── index.php
-        │   └── info.php
-        ├── dev-php7 = PHP 7.4 server files
-        │   ├── index.php
-        │   └── info.php
-        ├── dev-php8 = PHP 8 server files
-        │   ├── index.php
-        │   └── info.php
-        └── wordpress = Wordpress server files
-            └── info.php
+    └── nginx
+        ├── conf = NGINX server config
+        │   ├── nginx.conf
+        │   └── snippets
+        │       └── fastcgi-php.conf
+        ├── defaults = Default server config file
+        │   └── defaults.conf
+        ├── logs = Servers logs
+        │   └── README.md
+        └── sites = NGINX servers config files
+            ├── dev-php5.conf
+            ├── dev-php7.conf
+            ├── dev-php8.conf
+            ├── phpmyadmin.conf
+            └── wp-dev.conf
 </pre>
