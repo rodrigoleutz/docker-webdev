@@ -13,7 +13,7 @@ services:
     volumes:
       - ./nginx/logs:/var/log/nginx
       - ./nginx/conf/nginx.conf:/etc/nginx/nginx.conf
-      - ./nginx-public:/srv/http
+      - ../public:/srv/http
       - ./nginx/sites:/etc/nginx/conf.d
       - /etc/localtime:/etc/localtime:ro
       - ../public/wordpress:/var/www/html
@@ -91,7 +91,7 @@ services:
        - ./database/master:/bitnami/mariadb
        - /etc/localtime:/etc/localtime:ro
   db-backup:
-    image: bitnami/mariadb:10.4-debian-10
+    image: bitnami/mariadb:10.5-debian-10
     container_name: db-backup
     restart: 'always'
     ports:
