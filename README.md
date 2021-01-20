@@ -2,7 +2,7 @@
 Docker for PHP programming.
 
 <pre>
-Author:	 Rodrigo Leutz
+Author:  Rodrigo Leutz
 License: GPL v2.0
 </pre>
 
