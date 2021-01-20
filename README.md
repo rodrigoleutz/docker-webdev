@@ -1,8 +1,8 @@
 # docker-webdev
-Docker para programar em PHP
+Docker for PHP programming.
 
 <pre>
-Autor:		Rodrigo Leutz
+Author:		Rodrigo Leutz
 License:	GPL v2.0
 </pre>
 
@@ -11,20 +11,34 @@ License:	GPL v2.0
 
 -------------------------------------------
 
-<h2>Instruções:</h2>
+<h2>Instructions:</h2>
 
-<h3>Instalar</h3>
+<h3>Install</h3>
 <h5>Arch Linux / Fedora / Ubuntu</h5>
-	./install-hosts.sh
+<pre>
+./install-hosts.sh
+</pre>
 <br>
 <h3>Update</h3>
-        ./update.sh
+<pre>
+./update.sh
+</pre>
 <br>
-<h3>Ativar</h3>
-	./activate.sh
+<h3>Activate</h3>
+<pre>
+./activate.sh
+</pre>
 <br>
-<h3>Desativar</h3>
-	./deactivate.sh
+<h3>Deactivate</h3>
+<pre>
+./deactivate.sh
+</pre>
+<br>
+<h3>Backup</h3>
+<pre>
+./backup.sh
+</pre>
+Make a backup of database.
 <br>
 
 -------------------------------------------
@@ -49,16 +63,26 @@ License:	GPL v2.0
 -- Password: senha123
 </pre>
 
-- Mysql digite no bash: sudo docker exec -it db mysql -u root -psenha123
+- Mysql: 
+<pre>
+	sudo docker exec -it db mysql -u root -psenha123
+	sudo docker exec -it db-backup mysql -u root -psenha123
+</pre>
 
-
-<h3>Pasta dos arquivos</h3>
+<h3>Path</h3>
 <pre>
 ├── activate.sh = Activate script
+├── backup = Backup folder
+│   ├── files = Backup files
+│   │   └── README.md
+│   ├── logs = Backup Logs
+│   │   └── README.md
+│   └── README.md
+├── backup.sh = Backup script
 ├── deactivate.sh = Deactivate script
 ├── img
 │   └── php-docker.png
-├── install-hosts.sh = Install script
+├── install-hosts.sh
 ├── LICENSE
 ├── public
 │   ├── dev-php5 = PHP 5.6 server files
