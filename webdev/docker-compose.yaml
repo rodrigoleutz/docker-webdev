@@ -88,13 +88,13 @@ services:
     networks:
       - backend-web
     environment:
-      MARIADB_REPLICATION_MODE: master
-      MARIADB_REPLICATION_USER: repl_user
-      MARIADB_REPLICATION_PASSWORD: repl_senha123
-      MARIADB_ROOT_PASSWORD: senha123
-      MARIADB_DATABASE: wp-dev  
-      MARIADB_USER: wp-dev
-      MARIADB_PASSWORD: senha123
+      - MARIADB_REPLICATION_MODE: master
+      - MARIADB_REPLICATION_USER: repl_user
+      - MARIADB_REPLICATION_PASSWORD: repl_senha123
+      - MARIADB_ROOT_PASSWORD: senha123
+      - MARIADB_DATABASE: wp-dev
+      - MARIADB_USER: wp-dev
+      - MARIADB_PASSWORD: senha123
     volumes:
        - ./database/master:/bitnami/mariadb
        - /etc/localtime:/etc/localtime:ro
@@ -109,12 +109,12 @@ services:
     depends_on:
       - db
     environment:
-      MARIADB_REPLICATION_MODE: slave
-      MARIADB_REPLICATION_USER: repl_user
-      MARIADB_REPLICATION_PASSWORD: repl_senha123
-      MARIADB_MASTER_HOST: db
-      MARIADB_MASTER_PORT: 3306
-      MARIADB_MASTER_ROOT_PASSWORD: senha123
+      - MARIADB_REPLICATION_MODE: slave
+      - MARIADB_REPLICATION_USER: repl_user
+      - MARIADB_REPLICATION_PASSWORD: repl_senha123
+      - MARIADB_MASTER_HOST: db
+      - MARIADB_MASTER_PORT: 3306
+      - MARIADB_MASTER_ROOT_PASSWORD: senha123
     volumes:
       - ./database/backup:/bitnami/mariadb
       - /etc/localtime:/etc/localtime:ro

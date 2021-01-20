@@ -18,7 +18,7 @@ PASSWD=`cat webdev/docker-compose.yaml | grep MARIADB_MASTER_ROOT_PASSWORD | awk
 BACKDIR="backup/files"
 BACKLOG="backup/logs"
 DATE=$(date +%Y-%m-%d.%H%M)
-LOG="$BACKLOG/sql-bkp-$DATE.log"
+LOG="$BACKLOG/$DATE-SQL-BKP.log"
 
 ########################
 
@@ -85,13 +85,25 @@ start_bkp(){
 		exit_bkp
 	fi	
 }
+delete_files(){
+	DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )"
+	n=0
+	ls -1t "$DIR/$BACKDIR/*.tar.xz" |
+	while read file; do
+		n=$((n+1))
+		if [[ $n -gt $BACKNUM ]]; then
+        		rm -f "$DIR/$BACKDIR/$file"
+			echo "REMOVE BACKUP: [ SUCCESS ] -> $DIR/$BACKDIR/$file" >> $LOG
+    		fi
+	done
+}
 ########################
 
 ######### Init #########
 
 init_bkp
 start_bkp
+delete_files
 exit_bkp
-
 
 ########################
