@@ -38,7 +38,7 @@ License: GPL v2.0
 -------------------------------------------
 
 
-<h3>Para utilizar acesse no navegador:</h3>
+<h3>Access in your browser after installing:</h3>
 
 - PHP 5.6: http://dev.php5
 
