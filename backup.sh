@@ -9,7 +9,7 @@
 BACKNUM=30
 
 # Database => Info for database backup
-DBS=('wp-dev' 'mysql')
+DBS=('wp-dev')
 DOCKER="db-backup"
 USER="root"
 PASSWD=`cat webdev/docker-compose.yaml | grep MARIADB_MASTER_ROOT_PASSWORD | awk -F: '{ print $2 }' | sed -e 's/^[[:space:]]*//'`
@@ -74,7 +74,7 @@ start_bkp(){
 		echo "TAR: [ ERROR ] ->  $(pwd -P)$BACKDIR/$DATE-SQL.tar.xz" >> $LOG
 		ERROR="yes"
 	fi
-	if sudo docker exec -t $DOCKER mysqladmin -u$USER -p$PASSWD stop-slave
+	if sudo docker exec -t $DOCKER mysqladmin -u$USER -p$PASSWD start-slave
 	then
 		echo "START SERVICE: [ SUCCESS ] -> Service Started" >> $LOG
 	else
@@ -88,11 +88,10 @@ start_bkp(){
 delete_files(){
 	DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )"
 	n=0
-	ls -1t "$DIR/$BACKDIR/*.tar.xz" |
-	while read file; do
+	ls -1t $DIR/$BACKDIR/*.tar.xz | while read file; do
 		n=$((n+1))
 		if [[ $n -gt $BACKNUM ]]; then
-        		rm -f "$DIR/$BACKDIR/$file"
+        		rm -f "$file"
 			echo "REMOVE BACKUP: [ SUCCESS ] -> $DIR/$BACKDIR/$file" >> $LOG
     		fi
 	done
