@@ -2,8 +2,8 @@
 Docker for PHP programming.
 
 <pre>
-Author:		Rodrigo Leutz
-License:	GPL v2.0
+Author:	 Rodrigo Leutz
+License: GPL v2.0
 </pre>
 
 <center><a href="https://www.youtube.com/watch?v=rDWlNzBljS0" target="_blank"><img src="img/php-docker.png"></a></center>
@@ -18,28 +18,22 @@ License:	GPL v2.0
 <pre>
 ./install-hosts.sh
 </pre>
-<br>
 <h3>Update</h3>
 <pre>
 ./update.sh
 </pre>
-<br>
 <h3>Activate</h3>
 <pre>
 ./activate.sh
 </pre>
-<br>
 <h3>Deactivate</h3>
 <pre>
 ./deactivate.sh
 </pre>
-<br>
-<h3>Backup</h3>
+<h3>Database Backup</h3>
 <pre>
 ./backup.sh
 </pre>
-Make a backup of database.
-<br>
 
 -------------------------------------------
 
@@ -59,7 +53,7 @@ Make a backup of database.
 -- Hosts: db
           db-backup
 
--- User: root
+-- User:     root
 -- Password: senha123
 </pre>
 
