@@ -129,6 +129,18 @@ services:
       - backend-web
     environment:
       PMA_ARBITRARY: 1
+  tomcat:
+    image: tomcat
+    constainer_name: tomcat
+    restart: 'always'
+    ports:
+      - '8080'
+    networks:
+      - frontend-web
+      - backend-web
+    volumes:
+      - ./tomcat/base:/usr/local/tomcat
+      - ./tomcat/usr:/usr
 networks:
   frontend-web:
     internal: false
